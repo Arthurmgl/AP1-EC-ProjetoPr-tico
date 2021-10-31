@@ -257,7 +257,7 @@ void removercliente(){
     struct Cliente cadastro;
     getchar();
     printf("Digite o codigo do cliente a ser excluido: ");
-    gets(c);
+    scanf("%s", c);
 
     while(!feof(primeiro)){
         fread(&cadastro, sizeof(cadastro), 1, primeiro);
