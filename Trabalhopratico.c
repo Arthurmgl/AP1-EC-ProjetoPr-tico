@@ -253,7 +253,7 @@ int CadastroClientes (void)
 void removercliente(){
     FILE* primeiro = fopen("trabalhoarthur.dat", "r+b");
     FILE* segundo = fopen("trabalhoarthurnovo.dat", "wb");
-    char c[50];
+    char c[50], outro[50];
     struct Cliente cadastro;
     getchar();
     printf("Digite o codigo do cliente a ser excluido: ");
@@ -261,7 +261,8 @@ void removercliente(){
 
     while(!feof(primeiro)){
         fread(&cadastro, sizeof(cadastro), 1, primeiro);
-        if(strcmp(c, cadastro.codigo)!=0){
+        if((strcmp(c, cadastro.codigo)!=0)&&(strcmp(outro, cadastro.codigo)!=0)){
+        	strcpy(outro, cadastro.codigo);
             fwrite(&cadastro, sizeof(cadastro), 1, segundo);
         }
     }
@@ -273,6 +274,7 @@ void removercliente(){
 
 	
 }
+	
    
 void listarclientes()
 {   
@@ -281,7 +283,7 @@ void listarclientes()
     FILE * fp;
     if ((fp = fopen("trabalhoarthur.dat","r+b")) == NULL)
     {
-                 printf(" \n Arquivo n„o existe !");
+                 printf(" \n Arquivo n√£o existe !");
                 
     }else{
 	
