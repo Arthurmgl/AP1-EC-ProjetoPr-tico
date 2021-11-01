@@ -150,7 +150,6 @@ void Contas (void)
 	 int i=0, limite=0, limitet=0, o=-1;
 	 limite = acharlimiteconta();
 	 limitet = acharlimitetransacao();
-	 printf("%d--%d", limite, limitet);
 	 while(i<1){
 	 printf("\n");
 	 printf("Digite um comando para prosseguir:\nR - Listagem de todas as contas cadastradas.\nC - Cadastrar uma conta para um cliente.\nL - Listar todas as contas de um cliente.\nW - Realizar um saque em uma conta.\nD - Realizar um deposito em uma conta.\nT - Realizar transferencia entre contas.\nE - Exibir extrato de uma conta.\nS - Sair\n");   
