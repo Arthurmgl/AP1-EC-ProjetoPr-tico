@@ -251,7 +251,7 @@ int CadastroClientes (void)
     	printf("\n");
     	return(1);
 	}else{
-		printf("\nLimite de Clientes alcanÁado\n");
+		printf("\nLimite de Clientes alcan√ßado\n");
 		fclose(fp);
 		return(0);
 	} 
@@ -311,7 +311,7 @@ void listarclientes()
     FILE * fp;
     if ((fp = fopen("trabalhoarthur.dat","r+b")) == NULL)
     {
-                 printf(" \n Arquivo n„o existe !");
+                 printf(" \n Arquivo n√£o existe !");
                 
     }else{
 	
@@ -350,7 +350,7 @@ int validacaocliente(char a[50]){
     }else{
          outro = fread(&cadastro,sizeof(struct Cliente),1,fp);
     if(outro == 0){
-    	printf("Nenhuma conta cadastrado\n");
+    	//printf("Nenhuma conta cadastrado\n");
 	}else{
  while (outro == 1) 
  { 
